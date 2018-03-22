@@ -15,6 +15,9 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
   @IBOutlet weak var previewFromCamera: UIImageView!
   @IBOutlet weak var filterCollectionView: UICollectionView!
   
+  //필터 이름 설정
+  @IBOutlet weak var fileterLB: UILabel!
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -105,15 +108,8 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     connection.videoOrientation = .portrait
     
-//    let currentFilter = CIFilter(name: filters.first!)
-//
-//    if currentFilter != filter {
-//      currentFilter = CIFilter(name: filter)
-//    } else {
-//      currentFilter = CIFilter(name: filters.first)
-//    }
-    
     let currentFilterString = filters.first
+    print("응?", currentFilterString)
     var currentFilter = CIFilter(name: currentFilterString!)
     
     if currentFilterString != filter {
@@ -148,9 +144,7 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
   }
   
-  
-  
-  
+
 }
 
 //MARK : - Filter Collection View Methods
@@ -163,10 +157,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-    let item = filterCollectionView.dequeueReusableCell(withReuseIdentifier: "filter_cell", for: indexPath)
-    
-    item.tintColor = .green
-    
+    let item = filterCollectionView.dequeueReusableCell(withReuseIdentifier: "filter_cell", for: indexPath) as! FilterCustomCell
+  
     return item
     
   }
@@ -175,9 +167,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     let filterFromItemIndex = FilterIndex()
     filter = filterFromItemIndex.filterFromIndexPath(indexPath: indexPath)
-    
-    
-    
+    fileterLB.text = filtersName[indexPath.row]
   }
   
   

@@ -9,8 +9,9 @@
 import Foundation
 
 //필터 종류 정리
-let filters = ["CIColorCrossPolynomial", "CIPhotoEffectInstant", "CIPhotoEffectMono", "CIPhotoEffectNoir", "CIPhotoEffectProcess", "CISepiaTone", "CIVignetteEffect"]
+let filters = ["CIColorCrossPolynomial", "CIPhotoEffectInstant", "CIPhotoEffectMono", "CIPhotoEffectNoir", "CIPhotoEffectProcess", "CISepiaTone"]
 
+let filtersName = ["Normal", "Instant", "Mono", "Noir", "Process", "Sepia"]
 
 class FilterIndex {
   

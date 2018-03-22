@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC4A2E1F2063734400ADD115 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A2E1E2063734400ADD115 /* DataModel.swift */; };
+		FC4A2E232063920C00ADD115 /* FilterCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A2E222063920C00ADD115 /* FilterCustomCell.swift */; };
 		FCC84DF3205CFA0F00144E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */; };
 		FCC84DF8205CFA0F00144E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC84DF6205CFA0F00144E0F /* Main.storyboard */; };
 		FCC84DFB205CFA0F00144E0F /* DDalKak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC84DF9205CFA0F00144E0F /* DDalKak.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		FC4A2E1E2063734400ADD115 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		FC4A2E222063920C00ADD115 /* FilterCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCustomCell.swift; sourceTree = "<group>"; };
 		FCC84DEF205CFA0F00144E0F /* TTokddak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTokddak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC84DF7205CFA0F00144E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		FC4A2E202063734A00ADD115 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC4A2E222063920C00ADD115 /* FilterCustomCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				FCC84E16205CFCAD00144E0F /* MainViewController.swift in Sources */,
 				FC4A2E1F2063734400ADD115 /* DataModel.swift in Sources */,
+				FC4A2E232063920C00ADD115 /* FilterCustomCell.swift in Sources */,
 				FCC84DF3205CFA0F00144E0F /* AppDelegate.swift in Sources */,
 				FCC84DFB205CFA0F00144E0F /* DDalKak.xcdatamodeld in Sources */,
 			);

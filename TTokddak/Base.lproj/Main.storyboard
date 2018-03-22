@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -107,24 +112,29 @@
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filter_cell" id="ivT-CY-UqU">
-                                        <rect key="frame" x="0.0" y="7.666666666666667" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filter_cell" id="ivT-CY-UqU" customClass="FilterCustomCell" customModule="TTokddak" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="7.666666666666667" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T6P-Bc-Rxc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6P-Bc-Rxc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <color key="backgroundColor" red="0.98039215690000003" green="0.93725490199999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
                                         </view>
                                         <color key="tintColor" red="0.98039215690000003" green="0.93725490199999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="T6P-Bc-Rxc" firstAttribute="top" secondItem="ivT-CY-UqU" secondAttribute="top" id="5Pd-Ah-iKV"/>
+                                            <constraint firstItem="T6P-Bc-Rxc" firstAttribute="leading" secondItem="ivT-CY-UqU" secondAttribute="leading" id="IE9-Js-3QF"/>
+                                            <constraint firstAttribute="bottom" secondItem="T6P-Bc-Rxc" secondAttribute="bottom" id="MkP-1e-NKJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="T6P-Bc-Rxc" secondAttribute="trailing" id="baM-w7-Bmt"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -132,17 +142,26 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="LYD-5t-k3V"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-CV-xfb">
+                                <rect key="frame" x="112.66666666666669" y="540" width="150" height="19.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.97255808119999998" green="0.97253721950000005" blue="0.97254127260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RiI-dn-pow" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.65" id="Bca-FF-a1G"/>
+                            <constraint firstItem="Grs-CV-xfb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DTG-Jl-TFI"/>
                             <constraint firstItem="g4w-Oj-Wju" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="H58-Nl-ANe"/>
                             <constraint firstItem="g4w-Oj-Wju" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="IXI-mN-3eM"/>
                             <constraint firstItem="g4w-Oj-Wju" firstAttribute="top" secondItem="RiI-dn-pow" secondAttribute="bottom" id="K9X-ek-aIH"/>
                             <constraint firstItem="syv-Gp-E5G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M0d-rt-oEU"/>
                             <constraint firstItem="HMc-sV-Oci" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YJR-ws-HiC"/>
+                            <constraint firstItem="Grs-CV-xfb" firstAttribute="width" secondItem="RiI-dn-pow" secondAttribute="width" multiplier="0.4" id="Yi7-jR-nul"/>
                             <constraint firstItem="syv-Gp-E5G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZSH-ui-dSA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RiI-dn-pow" secondAttribute="trailing" id="aoT-dw-7Q3"/>
+                            <constraint firstItem="HMc-sV-Oci" firstAttribute="top" secondItem="Grs-CV-xfb" secondAttribute="bottom" constant="25" id="arw-xx-kJd"/>
                             <constraint firstItem="HMc-sV-Oci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ayJ-5u-7Oz"/>
                             <constraint firstItem="RiI-dn-pow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cus-4x-Oah"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syv-Gp-E5G" secondAttribute="trailing" id="ffj-OA-zFU"/>
@@ -154,6 +173,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="fileterLB" destination="Grs-CV-xfb" id="k8g-Sc-f8C"/>
                         <outlet property="filterCollectionView" destination="HMc-sV-Oci" id="h2T-59-4C8"/>
                         <outlet property="previewFromCamera" destination="RiI-dn-pow" id="66N-9Z-tn8"/>
                     </connections>
