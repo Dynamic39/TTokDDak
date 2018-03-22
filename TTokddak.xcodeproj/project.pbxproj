@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC4A2E1F2063734400ADD115 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4A2E1E2063734400ADD115 /* DataModel.swift */; };
 		FCC84DF3205CFA0F00144E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */; };
 		FCC84DF8205CFA0F00144E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC84DF6205CFA0F00144E0F /* Main.storyboard */; };
 		FCC84DFB205CFA0F00144E0F /* DDalKak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC84DF9205CFA0F00144E0F /* DDalKak.xcdatamodeld */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC4A2E1E2063734400ADD115 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		FCC84DEF205CFA0F00144E0F /* TTokddak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTokddak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC84DF7205CFA0F00144E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC4A2E1D2063733100ADD115 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC4A2E1E2063734400ADD115 /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC4A2E202063734A00ADD115 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC4A2E212063735200ADD115 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCC84E15205CFCAD00144E0F /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		FCC84DE6205CFA0F00144E0F = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +104,11 @@
 		FCC84DF1205CFA0F00144E0F /* TTokddak */ = {
 			isa = PBXGroup;
 			children = (
+				FC4A2E212063735200ADD115 /* Controller */,
+				FC4A2E202063734A00ADD115 /* View */,
+				FC4A2E1D2063733100ADD115 /* Model */,
 				FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */,
 				FCC84DF6205CFA0F00144E0F /* Main.storyboard */,
-				FCC84E15205CFCAD00144E0F /* MainViewController.swift */,
 				FCC84DFC205CFA0F00144E0F /* Assets.xcassets */,
 				FCC84DFE205CFA0F00144E0F /* LaunchScreen.storyboard */,
 				FCC84E01205CFA0F00144E0F /* Info.plist */,
@@ -203,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC84E16205CFCAD00144E0F /* MainViewController.swift in Sources */,
+				FC4A2E1F2063734400ADD115 /* DataModel.swift in Sources */,
 				FCC84DF3205CFA0F00144E0F /* AppDelegate.swift in Sources */,
 				FCC84DFB205CFA0F00144E0F /* DDalKak.xcdatamodeld in Sources */,
 			);

@@ -15,7 +15,6 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
   @IBOutlet weak var previewFromCamera: UIImageView!
   @IBOutlet weak var filterCollectionView: UICollectionView!
   
-  var filterDictionaries:[String:Any] = [:]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -41,6 +40,8 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
   var orientation: AVCaptureVideoOrientation = AVCaptureVideoOrientation.portrait
   //필터 사용시 사용할 context설정
   let context = CIContext()
+  //필터 명
+  var filter:String = "CIColorCrossPolynomial"
   
   override func viewDidLayoutSubviews() {
     //오리엔테이션 고정
@@ -104,10 +105,25 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     connection.videoOrientation = .portrait
     
-    let comicEffect = CIFilter(name: "CIPhotoEffectProcess")
-    comicEffect?.setValue(cameraImage, forKey: kCIInputImageKey)
+//    let currentFilter = CIFilter(name: filters.first!)
+//
+//    if currentFilter != filter {
+//      currentFilter = CIFilter(name: filter)
+//    } else {
+//      currentFilter = CIFilter(name: filters.first)
+//    }
     
-    let filteredImage = UIImage(ciImage: comicEffect?.value(forKey: kCIOutputImageKey) as! CIImage)
+    let currentFilterString = filters.first
+    var currentFilter = CIFilter(name: currentFilterString!)
+    
+    if currentFilterString != filter {
+      currentFilter = CIFilter(name: filter)
+    } else {
+      currentFilter = CIFilter(name: currentFilterString!)
+    }
+    
+    currentFilter?.setValue(cameraImage, forKey: kCIInputImageKey)
+    let filteredImage = UIImage(ciImage: currentFilter?.value(forKey: kCIOutputImageKey) as! CIImage)
     DispatchQueue.main.async {
       self.previewFromCamera.image = filteredImage
     }
@@ -142,12 +158,25 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
   
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return filterDictionaries.count
+    return filters.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-    return UICollectionViewCell()
+    let item = filterCollectionView.dequeueReusableCell(withReuseIdentifier: "filter_cell", for: indexPath)
+    
+    item.tintColor = .green
+    
+    return item
+    
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+    let filterFromItemIndex = FilterIndex()
+    filter = filterFromItemIndex.filterFromIndexPath(indexPath: indexPath)
+    
+    
     
   }
   
