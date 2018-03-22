@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCC84DF3205CFA0F00144E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */; };
+		FCC84DF8205CFA0F00144E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC84DF6205CFA0F00144E0F /* Main.storyboard */; };
+		FCC84DFB205CFA0F00144E0F /* DDalKak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC84DF9205CFA0F00144E0F /* DDalKak.xcdatamodeld */; };
+		FCC84DFD205CFA0F00144E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC84DFC205CFA0F00144E0F /* Assets.xcassets */; };
+		FCC84E00205CFA0F00144E0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC84DFE205CFA0F00144E0F /* LaunchScreen.storyboard */; };
+		FCC84E0B205CFA0F00144E0F /* DDalKakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC84E0A205CFA0F00144E0F /* DDalKakTests.swift */; };
+		FCC84E16205CFCAD00144E0F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC84E15205CFCAD00144E0F /* MainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCC84E07205CFA0F00144E0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCC84DE7205CFA0F00144E0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC84DEE205CFA0F00144E0F;
+			remoteInfo = DDalKak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FCC84DEF205CFA0F00144E0F /* TTokddak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTokddak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCC84DF7205CFA0F00144E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCC84DFA205CFA0F00144E0F /* DDalKak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DDalKak.xcdatamodel; sourceTree = "<group>"; };
+		FCC84DFC205CFA0F00144E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCC84DFF205CFA0F00144E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCC84E01205CFA0F00144E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC84E06205CFA0F00144E0F /* TTokddakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTokddakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC84E0A205CFA0F00144E0F /* DDalKakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDalKakTests.swift; sourceTree = "<group>"; };
+		FCC84E0C205CFA0F00144E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC84E15205CFCAD00144E0F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCC84DEC205CFA0F00144E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC84E03205CFA0F00144E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCC84DE6205CFA0F00144E0F = {
+			isa = PBXGroup;
+			children = (
+				FCC84DF1205CFA0F00144E0F /* TTokddak */,
+				FCC84E09205CFA0F00144E0F /* TTokddakTests */,
+				FCC84DF0205CFA0F00144E0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCC84DF0205CFA0F00144E0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCC84DEF205CFA0F00144E0F /* TTokddak.app */,
+				FCC84E06205CFA0F00144E0F /* TTokddakTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCC84DF1205CFA0F00144E0F /* TTokddak */ = {
+			isa = PBXGroup;
+			children = (
+				FCC84DF2205CFA0F00144E0F /* AppDelegate.swift */,
+				FCC84DF6205CFA0F00144E0F /* Main.storyboard */,
+				FCC84E15205CFCAD00144E0F /* MainViewController.swift */,
+				FCC84DFC205CFA0F00144E0F /* Assets.xcassets */,
+				FCC84DFE205CFA0F00144E0F /* LaunchScreen.storyboard */,
+				FCC84E01205CFA0F00144E0F /* Info.plist */,
+				FCC84DF9205CFA0F00144E0F /* DDalKak.xcdatamodeld */,
+			);
+			path = TTokddak;
+			sourceTree = "<group>";
+		};
+		FCC84E09205CFA0F00144E0F /* TTokddakTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCC84E0A205CFA0F00144E0F /* DDalKakTests.swift */,
+				FCC84E0C205CFA0F00144E0F /* Info.plist */,
+			);
+			path = TTokddakTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCC84DEE205CFA0F00144E0F /* TTokddak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC84E0F205CFA0F00144E0F /* Build configuration list for PBXNativeTarget "TTokddak" */;
+			buildPhases = (
+				FCC84DEB205CFA0F00144E0F /* Sources */,
+				FCC84DEC205CFA0F00144E0F /* Frameworks */,
+				FCC84DED205CFA0F00144E0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTokddak;
+			productName = DDalKak;
+			productReference = FCC84DEF205CFA0F00144E0F /* TTokddak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCC84E05205CFA0F00144E0F /* TTokddakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC84E12205CFA0F00144E0F /* Build configuration list for PBXNativeTarget "TTokddakTests" */;
+			buildPhases = (
+				FCC84E02205CFA0F00144E0F /* Sources */,
+				FCC84E03205CFA0F00144E0F /* Frameworks */,
+				FCC84E04205CFA0F00144E0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCC84E08205CFA0F00144E0F /* PBXTargetDependency */,
+			);
+			name = TTokddakTests;
+			productName = DDalKakTests;
+			productReference = FCC84E06205CFA0F00144E0F /* TTokddakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCC84DE7205CFA0F00144E0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Samuel K";
+				TargetAttributes = {
+					FCC84DEE205CFA0F00144E0F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FCC84E05205CFA0F00144E0F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FCC84DEE205CFA0F00144E0F;
+					};
+				};
+			};
+			buildConfigurationList = FCC84DEA205CFA0F00144E0F /* Build configuration list for PBXProject "TTokddak" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCC84DE6205CFA0F00144E0F;
+			productRefGroup = FCC84DF0205CFA0F00144E0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCC84DEE205CFA0F00144E0F /* TTokddak */,
+				FCC84E05205CFA0F00144E0F /* TTokddakTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCC84DED205CFA0F00144E0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC84E00205CFA0F00144E0F /* LaunchScreen.storyboard in Resources */,
+				FCC84DFD205CFA0F00144E0F /* Assets.xcassets in Resources */,
+				FCC84DF8205CFA0F00144E0F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC84E04205CFA0F00144E0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCC84DEB205CFA0F00144E0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC84E16205CFCAD00144E0F /* MainViewController.swift in Sources */,
+				FCC84DF3205CFA0F00144E0F /* AppDelegate.swift in Sources */,
+				FCC84DFB205CFA0F00144E0F /* DDalKak.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC84E02205CFA0F00144E0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC84E0B205CFA0F00144E0F /* DDalKakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCC84E08205CFA0F00144E0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC84DEE205CFA0F00144E0F /* TTokddak */;
+			targetProxy = FCC84E07205CFA0F00144E0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCC84DF6205CFA0F00144E0F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC84DF7205CFA0F00144E0F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCC84DFE205CFA0F00144E0F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC84DFF205CFA0F00144E0F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCC84E0D205CFA0F00144E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCC84E0E205CFA0F00144E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCC84E10205CFA0F00144E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
+				INFOPLIST_FILE = "$(SRCROOT)/TTokddak/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelK.TTokddak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCC84E11205CFA0F00144E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
+				INFOPLIST_FILE = "$(SRCROOT)/TTokddak/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelK.TTokddak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FCC84E13205CFA0F00144E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RK46U626P;
+				INFOPLIST_FILE = DDalKakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelK.DDalKakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTokddak.app/TTokddak";
+			};
+			name = Debug;
+		};
+		FCC84E14205CFA0F00144E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RK46U626P;
+				INFOPLIST_FILE = DDalKakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SamuelK.DDalKakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TTokddak.app/TTokddak";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCC84DEA205CFA0F00144E0F /* Build configuration list for PBXProject "TTokddak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC84E0D205CFA0F00144E0F /* Debug */,
+				FCC84E0E205CFA0F00144E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC84E0F205CFA0F00144E0F /* Build configuration list for PBXNativeTarget "TTokddak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC84E10205CFA0F00144E0F /* Debug */,
+				FCC84E11205CFA0F00144E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC84E12205CFA0F00144E0F /* Build configuration list for PBXNativeTarget "TTokddakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC84E13205CFA0F00144E0F /* Debug */,
+				FCC84E14205CFA0F00144E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FCC84DF9205CFA0F00144E0F /* DDalKak.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FCC84DFA205CFA0F00144E0F /* DDalKak.xcdatamodel */,
+			);
+			currentVersion = FCC84DFA205CFA0F00144E0F /* DDalKak.xcdatamodel */;
+			path = DDalKak.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FCC84DE7205CFA0F00144E0F /* Project object */;
+}
