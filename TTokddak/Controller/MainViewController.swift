@@ -18,6 +18,7 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
   //필터 이름 설정
   @IBOutlet weak var fileterLB: UILabel!
   
+  var isCollectionViewHidden:Bool = true
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,6 +26,7 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     setupDevice()
     setupInpuToOutput()
     
+    filterCollectionView.isHidden = true
   }
   
   
@@ -45,6 +47,8 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
   let context = CIContext()
   //필터 명
   var filter:String = "CIColorCrossPolynomial"
+  //사진 촬영 여부
+  var isTakePhoto: Bool = false
   
   override func viewDidLayoutSubviews() {
     //오리엔테이션 고정
@@ -101,15 +105,37 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
   }
   
+  //사진을 저장하기 위한 메서드
   func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
     
-    let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+    connection.videoOrientation = .portrait
+    self.getImageFromSampleBuffer(buffer: sampleBuffer)
+    
+    if isTakePhoto {
+      isTakePhoto = false
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let saveVC = storyboard.instantiateViewController(withIdentifier: "SaveVC") as! SaveVC
+      
+      DispatchQueue.main.async {
+        saveVC.capturedImage = self.previewFromCamera.image
+        self.present(saveVC, animated: true, completion: nil)
+        
+      }
+
+    }
+    
+    
+  }
+  
+  //필터 기능을 추가하는 메서드를 따로 구성한다
+  func getImageFromSampleBuffer(buffer: CMSampleBuffer) {
+    
+    let pixelBuffer = CMSampleBufferGetImageBuffer(buffer)
     let cameraImage = CIImage(cvImageBuffer: pixelBuffer!)
     
-    connection.videoOrientation = .portrait
+    
     
     let currentFilterString = filters.first
-    print("응?", currentFilterString)
     var currentFilter = CIFilter(name: currentFilterString!)
     
     if currentFilterString != filter {
@@ -144,6 +170,41 @@ class MainViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
   }
   
+  @IBAction func showTheCollectionViewMenu(_ sender: Any) {
+    collectionViewONOFFControlHandler()
+  }
+  
+  @IBAction func takePhotoHandler(_ sender: Any) {
+    isTakePhoto = true
+  }
+  
+  //Methods
+  
+  func collectionViewONOFFControlHandler() {
+    
+    if isCollectionViewHidden {
+      filterCollectionView.isHidden = false
+      isCollectionViewHidden = false
+    } else {
+      filterCollectionView.isHidden = true
+      isCollectionViewHidden = true
+    }
+  }
+  
+  func fadeOutLabel() {
+    if fileterLB.alpha != 0  {
+      animationStart()
+    } else {
+      fileterLB.alpha = 1
+      animationStart()
+    }
+  }
+  
+  func animationStart() {
+    UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseOut, animations: {
+      self.fileterLB.alpha = 0.0
+    })
+  }
 
 }
 
@@ -168,9 +229,9 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     let filterFromItemIndex = FilterIndex()
     filter = filterFromItemIndex.filterFromIndexPath(indexPath: indexPath)
     fileterLB.text = filtersName[indexPath.row]
+    fadeOutLabel()
+    
   }
-  
-  
   
   
 }
